@@ -39,6 +39,8 @@ func RestorePod(clientset *kubernetes.Clientset,fileName string) {
             },
             Spec: newpod.Spec,
         }
+
+        
     /////run new pod
         _, err = clientset.CoreV1().Pods(newpod.Namespace).Create(context.TODO(), new, metav1.CreateOptions{})
     if err != nil {

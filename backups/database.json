@@ -12,5 +12,12 @@
     "Resource": "pod",
     "CreatedAt": "2024-08-13T17:06:20.9095831+05:30",
     "FilePath": "backups\\nginx-default-pod.yaml"
+  },
+  {
+    "Name": "nginx-deployment",
+    "Namespace": "default",
+    "Resource": "deployment",
+    "CreatedAt": "2024-08-16T18:25:56.3832531+05:30",
+    "FilePath": "backups\\nginx-deployment-default-dep.yaml"
   }
 ]

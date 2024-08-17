@@ -12,6 +12,24 @@ import (
 
 var backupObjectName string
 
+var restoredeploymentCmd = &cobra.Command{
+	Use:   "restore",
+	Short: "A brief description of your command",
+	Long: `A longer description that spans multiple lines and likely contains examples
+and usage of using your command. For example:
+
+Cobra is a CLI library for Go that empowers applications.
+This application is a tool to generate the needed files
+to quickly create a Cobra application.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		clientset:=internal.Connect(path)
+		internal.RestoreDeployment(clientset,backupObjectName)
+		
+		fmt.Println("restoredeployment called")
+	},
+}
+
+
 // restorepodCmd represents the restorepod command
 var restorepodCmd = &cobra.Command{
 	Use:   "restore",
@@ -31,9 +49,13 @@ to quickly create a Cobra application.`,
 
 func init() {
 	podCmd.AddCommand(restorepodCmd)
+	deploymentCmd.AddCommand(restoredeploymentCmd)
 
 	restorepodCmd.Flags().StringVarP(&backupObjectName, "object", "o", "", "Name of the resource")
 	restorepodCmd.Flags().StringVarP(&path, "path", "p", "", "Name of the resource")  
+
+	restoredeploymentCmd.Flags().StringVarP(&backupObjectName, "object", "o", "", "Name of the resource")
+	restoredeploymentCmd.Flags().StringVarP(&path, "path", "p", "", "Name of the resource")  
 
 	// Here you will define your flags and configuration settings.
 
