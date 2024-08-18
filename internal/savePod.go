@@ -42,7 +42,7 @@ func SavePod(clientset *kubernetes.Clientset,podName string,namespace string)(*o
     ////create backup obect
 
     backup,_:=objects.CreateBackup(podName,namespace,"pod",filePath)
-    objects.AddBackup(*backup)
+    // objects.AddBackup(*backup)
     fmt.Println("pod saved")
 
     return backup

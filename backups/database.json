@@ -19,5 +19,12 @@
     "Resource": "deployment",
     "CreatedAt": "2024-08-16T18:25:56.3832531+05:30",
     "FilePath": "backups\\nginx-deployment-default-dep.yaml"
+  },
+  {
+    "Name": "nginx-deployment",
+    "Namespace": "default",
+    "Resource": "deployment",
+    "CreatedAt": "2024-08-18T10:00:50.6802098+05:30",
+    "FilePath": "backups\\nginx-deployment-default-dep.yaml"
   }
 ]

@@ -38,7 +38,7 @@ func SaveDeployment(clientset *kubernetes.Clientset,depName string,namespace str
     }
 	
 	backup,_:=objects.CreateBackup(depName,namespace,"deployment",filePath)
-    objects.AddBackup(*backup)
+    // objects.AddBackup(*backup)
     fmt.Println("deployment saved")
 
 
