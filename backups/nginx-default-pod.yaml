@@ -6,213 +6,24 @@ objectmeta:
     generatename: ""
     namespace: default
     selflink: ""
-    uid: f33048a1-d2a6-4499-bf03-794ccb63ba8e
-    resourceversion: "591826"
+    uid: 678a49a2-8904-4138-bba3-22b602b83993
+    resourceversion: "36370"
     generation: 0
-    creationtimestamp: "2024-08-12T17:17:23+05:30"
+    creationtimestamp: "2024-08-25T11:10:01+05:30"
     deletiontimestamp: null
     deletiongraceperiodseconds: null
     labels:
         env: test
     annotations:
         kubectl.kubernetes.io/last-applied-configuration: |
-            {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"env":"test"},"name":"nginx","namespace":"default"},"spec":{"containers":[{"image":"nginx","imagePullPolicy":"IfNotPresent","name":"nginx"}],"nodeSelector":{"disktype":"ssd"}}}
+            {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"env":"test"},"name":"nginx","namespace":"default"},"spec":{"containers":[{"image":"nginx","imagePullPolicy":"IfNotPresent","name":"nginx"}]}}
     ownerreferences: []
     finalizers: []
     managedfields:
-        - manager: kube-scheduler
-          operation: Update
-          apiversion: v1
-          time: "2024-08-12T17:17:23+05:30"
-          fieldstype: FieldsV1
-          fieldsv1:
-            raw:
-                - 123
-                - 34
-                - 102
-                - 58
-                - 115
-                - 116
-                - 97
-                - 116
-                - 117
-                - 115
-                - 34
-                - 58
-                - 123
-                - 34
-                - 102
-                - 58
-                - 99
-                - 111
-                - 110
-                - 100
-                - 105
-                - 116
-                - 105
-                - 111
-                - 110
-                - 115
-                - 34
-                - 58
-                - 123
-                - 34
-                - 46
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 107
-                - 58
-                - 123
-                - 92
-                - 34
-                - 116
-                - 121
-                - 112
-                - 101
-                - 92
-                - 34
-                - 58
-                - 92
-                - 34
-                - 80
-                - 111
-                - 100
-                - 83
-                - 99
-                - 104
-                - 101
-                - 100
-                - 117
-                - 108
-                - 101
-                - 100
-                - 92
-                - 34
-                - 125
-                - 34
-                - 58
-                - 123
-                - 34
-                - 46
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
-                - 108
-                - 97
-                - 115
-                - 116
-                - 80
-                - 114
-                - 111
-                - 98
-                - 101
-                - 84
-                - 105
-                - 109
-                - 101
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
-                - 108
-                - 97
-                - 115
-                - 116
-                - 84
-                - 114
-                - 97
-                - 110
-                - 115
-                - 105
-                - 116
-                - 105
-                - 111
-                - 110
-                - 84
-                - 105
-                - 109
-                - 101
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
-                - 109
-                - 101
-                - 115
-                - 115
-                - 97
-                - 103
-                - 101
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
-                - 114
-                - 101
-                - 97
-                - 115
-                - 111
-                - 110
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
-                - 115
-                - 116
-                - 97
-                - 116
-                - 117
-                - 115
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
-                - 116
-                - 121
-                - 112
-                - 101
-                - 34
-                - 58
-                - 123
-                - 125
-                - 125
-                - 125
-                - 125
-                - 125
-          subresource: status
         - manager: kubectl-client-side-apply
           operation: Update
           apiversion: v1
-          time: "2024-08-12T17:17:23+05:30"
+          time: "2024-08-25T11:10:01+05:30"
           fieldstype: FieldsV1
           fieldsv1:
             raw:
@@ -578,26 +389,6 @@ objectmeta:
                 - 34
                 - 102
                 - 58
-                - 110
-                - 111
-                - 100
-                - 101
-                - 83
-                - 101
-                - 108
-                - 101
-                - 99
-                - 116
-                - 111
-                - 114
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
                 - 114
                 - 101
                 - 115
@@ -699,9 +490,535 @@ objectmeta:
                 - 125
                 - 125
           subresource: ""
+        - manager: kubelet
+          operation: Update
+          apiversion: v1
+          time: "2024-08-25T11:10:41+05:30"
+          fieldstype: FieldsV1
+          fieldsv1:
+            raw:
+                - 123
+                - 34
+                - 102
+                - 58
+                - 115
+                - 116
+                - 97
+                - 116
+                - 117
+                - 115
+                - 34
+                - 58
+                - 123
+                - 34
+                - 102
+                - 58
+                - 99
+                - 111
+                - 110
+                - 100
+                - 105
+                - 116
+                - 105
+                - 111
+                - 110
+                - 115
+                - 34
+                - 58
+                - 123
+                - 34
+                - 107
+                - 58
+                - 123
+                - 92
+                - 34
+                - 116
+                - 121
+                - 112
+                - 101
+                - 92
+                - 34
+                - 58
+                - 92
+                - 34
+                - 67
+                - 111
+                - 110
+                - 116
+                - 97
+                - 105
+                - 110
+                - 101
+                - 114
+                - 115
+                - 82
+                - 101
+                - 97
+                - 100
+                - 121
+                - 92
+                - 34
+                - 125
+                - 34
+                - 58
+                - 123
+                - 34
+                - 46
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 108
+                - 97
+                - 115
+                - 116
+                - 80
+                - 114
+                - 111
+                - 98
+                - 101
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 108
+                - 97
+                - 115
+                - 116
+                - 84
+                - 114
+                - 97
+                - 110
+                - 115
+                - 105
+                - 116
+                - 105
+                - 111
+                - 110
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 115
+                - 116
+                - 97
+                - 116
+                - 117
+                - 115
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 116
+                - 121
+                - 112
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 125
+                - 44
+                - 34
+                - 107
+                - 58
+                - 123
+                - 92
+                - 34
+                - 116
+                - 121
+                - 112
+                - 101
+                - 92
+                - 34
+                - 58
+                - 92
+                - 34
+                - 73
+                - 110
+                - 105
+                - 116
+                - 105
+                - 97
+                - 108
+                - 105
+                - 122
+                - 101
+                - 100
+                - 92
+                - 34
+                - 125
+                - 34
+                - 58
+                - 123
+                - 34
+                - 46
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 108
+                - 97
+                - 115
+                - 116
+                - 80
+                - 114
+                - 111
+                - 98
+                - 101
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 108
+                - 97
+                - 115
+                - 116
+                - 84
+                - 114
+                - 97
+                - 110
+                - 115
+                - 105
+                - 116
+                - 105
+                - 111
+                - 110
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 115
+                - 116
+                - 97
+                - 116
+                - 117
+                - 115
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 116
+                - 121
+                - 112
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 125
+                - 44
+                - 34
+                - 107
+                - 58
+                - 123
+                - 92
+                - 34
+                - 116
+                - 121
+                - 112
+                - 101
+                - 92
+                - 34
+                - 58
+                - 92
+                - 34
+                - 82
+                - 101
+                - 97
+                - 100
+                - 121
+                - 92
+                - 34
+                - 125
+                - 34
+                - 58
+                - 123
+                - 34
+                - 46
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 108
+                - 97
+                - 115
+                - 116
+                - 80
+                - 114
+                - 111
+                - 98
+                - 101
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 108
+                - 97
+                - 115
+                - 116
+                - 84
+                - 114
+                - 97
+                - 110
+                - 115
+                - 105
+                - 116
+                - 105
+                - 111
+                - 110
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 115
+                - 116
+                - 97
+                - 116
+                - 117
+                - 115
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 116
+                - 121
+                - 112
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 125
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 99
+                - 111
+                - 110
+                - 116
+                - 97
+                - 105
+                - 110
+                - 101
+                - 114
+                - 83
+                - 116
+                - 97
+                - 116
+                - 117
+                - 115
+                - 101
+                - 115
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 104
+                - 111
+                - 115
+                - 116
+                - 73
+                - 80
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 112
+                - 104
+                - 97
+                - 115
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 112
+                - 111
+                - 100
+                - 73
+                - 80
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 112
+                - 111
+                - 100
+                - 73
+                - 80
+                - 115
+                - 34
+                - 58
+                - 123
+                - 34
+                - 46
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 107
+                - 58
+                - 123
+                - 92
+                - 34
+                - 105
+                - 112
+                - 92
+                - 34
+                - 58
+                - 92
+                - 34
+                - 49
+                - 48
+                - 46
+                - 50
+                - 52
+                - 52
+                - 46
+                - 48
+                - 46
+                - 49
+                - 52
+                - 92
+                - 34
+                - 125
+                - 34
+                - 58
+                - 123
+                - 34
+                - 46
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 105
+                - 112
+                - 34
+                - 58
+                - 123
+                - 125
+                - 125
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 115
+                - 116
+                - 97
+                - 114
+                - 116
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 125
+                - 125
+          subresource: status
 spec:
     volumes:
-        - name: kube-api-access-fjmxx
+        - name: kube-api-access-mngqz
           volumesource:
             hostpath: null
             emptydir: null
@@ -735,6 +1052,7 @@ spec:
                         audience: ""
                         expirationseconds: 3607
                         path: token
+                      clustertrustbundle: null
                     - secret: null
                       downwardapi: null
                       configmap:
@@ -746,6 +1064,7 @@ spec:
                               mode: null
                         optional: null
                       serviceaccounttoken: null
+                      clustertrustbundle: null
                     - secret: null
                       downwardapi:
                         items:
@@ -757,6 +1076,7 @@ spec:
                               mode: null
                       configmap: null
                       serviceaccounttoken: null
+                      clustertrustbundle: null
                 defaultmode: 420
             portworxvolume: null
             scaleio: null
@@ -780,8 +1100,9 @@ spec:
           resizepolicy: []
           restartpolicy: null
           volumemounts:
-            - name: kube-api-access-fjmxx
+            - name: kube-api-access-mngqz
               readonly: true
+              recursivereadonly: null
               mountpath: /var/run/secrets/kubernetes.io/serviceaccount
               subpath: ""
               mountpropagation: null
@@ -803,12 +1124,11 @@ spec:
     terminationgraceperiodseconds: 30
     activedeadlineseconds: null
     dnspolicy: ClusterFirst
-    nodeselector:
-        disktype: ssd
+    nodeselector: {}
     serviceaccountname: default
     deprecatedserviceaccount: default
     automountserviceaccounttoken: null
-    nodename: ""
+    nodename: minikube
     hostnetwork: false
     hostpid: false
     hostipc: false
@@ -824,6 +1144,7 @@ spec:
         sysctls: []
         fsgroupchangepolicy: null
         seccompprofile: null
+        apparmorprofile: null
     imagepullsecrets: []
     hostname: ""
     subdomain: ""
@@ -856,24 +1177,62 @@ spec:
     schedulinggates: []
     resourceclaims: []
 status:
-    phase: Pending
+    phase: Running
     conditions:
-        - type: PodScheduled
-          status: "False"
+        - type: Initialized
+          status: "True"
           lastprobetime: "0001-01-01T00:00:00Z"
-          lasttransitiontime: "2024-08-12T17:17:23+05:30"
-          reason: Unschedulable
-          message: '0/1 nodes are available: 1 node(s) didn''t match Pod''s node affinity/selector. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+          lasttransitiontime: "2024-08-25T11:10:01+05:30"
+          reason: ""
+          message: ""
+        - type: Ready
+          status: "True"
+          lastprobetime: "0001-01-01T00:00:00Z"
+          lasttransitiontime: "2024-08-25T11:10:41+05:30"
+          reason: ""
+          message: ""
+        - type: ContainersReady
+          status: "True"
+          lastprobetime: "0001-01-01T00:00:00Z"
+          lasttransitiontime: "2024-08-25T11:10:41+05:30"
+          reason: ""
+          message: ""
+        - type: PodScheduled
+          status: "True"
+          lastprobetime: "0001-01-01T00:00:00Z"
+          lasttransitiontime: "2024-08-25T11:10:01+05:30"
+          reason: ""
+          message: ""
     message: ""
     reason: ""
     nominatednodename: ""
-    hostip: ""
+    hostip: 192.168.49.2
     hostips: []
-    podip: ""
-    podips: []
-    starttime: null
+    podip: 10.244.0.14
+    podips:
+        - ip: 10.244.0.14
+    starttime: "2024-08-25T11:10:01+05:30"
     initcontainerstatuses: []
-    containerstatuses: []
+    containerstatuses:
+        - name: nginx
+          state:
+            waiting: null
+            running:
+                startedat: "2024-08-25T11:10:40+05:30"
+            terminated: null
+          lastterminationstate:
+            waiting: null
+            running: null
+            terminated: null
+          ready: true
+          restartcount: 0
+          image: nginx:latest
+          imageid: docker-pullable://nginx@sha256:447a8665cc1dab95b1ca778e162215839ccbb9189104c79d7ec3a81e14577add
+          containerid: docker://133fa4f42c8c0e4b36f476842abd9e9791dd45ce6c730c83e42cf9ddabe308af
+          started: true
+          allocatedresources: {}
+          resources: null
+          volumemounts: []
     qosclass: BestEffort
     ephemeralcontainerstatuses: []
     resize: ""

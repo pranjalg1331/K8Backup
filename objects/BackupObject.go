@@ -1,6 +1,7 @@
 package objects
 
 import (
+	// "K8Backup/internal"
 	"context"
 	// "encoding/json"
 	"fmt"
@@ -71,71 +72,72 @@ func ListBackups() (error){
     
 }
 
-func CreateBackup(name, namespace, resource,filePath string) (*Backup,error) {
-    connectMongo()
-    backup:= &Backup{
-        Name:      name,
-        Namespace: namespace,
-        Resource:  resource,
-        CreatedAt: time.Now(),
-        FilePath:  filePath,
+func GetBackup(filepath string) (*Backup, error) {
+    connectMongo() // Ensure connection to MongoDB
+    var backup Backup
+
+    // Create the filter
+    filter := bson.M{
+        "filepath":      filepath,
+
     }
 
-    _, err := collection.InsertOne(ctx, backup)
-    return backup,err
+    // Find one document in the collection that matches the filter
+    err := collection.FindOne(ctx, filter).Decode(&backup)
+    if err != nil {
+        return nil, err
+    }
+    fmt.Println(backup)
+    // fmt.Println(backup.FilePath)
+
+    return &backup, nil
 }
 
-func DeleteBackup(name string) error {
+
+func CreateBackup(name, namespace, resource,filePath string) (*Backup,error) {
     connectMongo()
-    filter := bson.M{"name": name}
+    var flag bool
+    flag=true
+    fmt.Println(filePath)
+    backup,_:=GetBackup(filePath)
+    // fmt.Println(backup)
+    if(backup!=nil){
+        fmt.Println("backup with this name already exists")
+        flag=AskForConfirmation()
+    }
+
+    if(flag){
+        if(backup!=nil){
+            DeleteBackup(filePath)
+        }
+        backup= &Backup{
+            Name:      name,
+            Namespace: namespace,
+            Resource:  resource,
+            CreatedAt: time.Now(),
+            FilePath:  filePath,
+        }
+    
+        _, err := collection.InsertOne(ctx, backup)
+        return backup,err
+    }
+    return nil,nil
+    
+}
+
+func DeleteBackup(filepath string) error {
+    connectMongo()
+    filter := bson.M{"filepath": filepath}
     
     result, err := collection.DeleteMany(context.TODO(), filter)
     if err != nil {
         return err
     }
     if result.DeletedCount == 0 {
-        return fmt.Errorf("no backup found with name: %s", name)
+        return fmt.Errorf("no backup found filepath : %s", filepath)
     }
     return nil
 }
 
 
-// func LoadBackups() ([]Backup, error) {
-//     data, err := os.ReadFile("backups\\database.json")
-//     if err != nil {
-//         return nil, err
-//     }
-
-//     var backups []Backup
-//     err = json.Unmarshal(data, &backups)
-//     if err != nil {
-//         return nil, err
-//     }
-
-//     return backups, nil
-// }
-
-// func AddBackup(newBackup Backup) error {
-//     // Load existing backups
-//     backups, err := LoadBackups()
-//     if err != nil && !os.IsNotExist(err) {
-//         return err
-//     }
-
-//     // Add the new backup to the list
-//     backups = append(backups, newBackup)
-
-//     // Save the updated list back to the file
-//     return SaveBackups( backups)
-// }
-
-
-// func SaveBackups( backups []Backup) error {
-//     fmt.Println("calling file")
-//     data, err := json.MarshalIndent(backups, "", "  ")
-//     if err != nil {
-//         return err
-//     }
-//     return os.WriteFile("backups\\database.json", data, 0644)
-// }
 

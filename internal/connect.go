@@ -14,9 +14,6 @@ import (
 func Connect(path string) *kubernetes.Clientset {
     
     config:=GetConfig(path)
-    // if err != nil {
-    //     log.Panic("failed to create K8s config")
-    // }
 
     clientset, err := kubernetes.NewForConfig(config)
     if err != nil {

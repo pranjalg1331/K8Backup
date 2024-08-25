@@ -10,20 +10,15 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var backupname string;
+var backupfilepath string;
 
 // deleteCmd represents the delete command
 var deleteCmd = &cobra.Command{
 	Use:   "delete",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "delete any backup object by passing the objects file name in --file flag",
+	
 	Run: func(cmd *cobra.Command, args []string) {
-		objects.DeleteBackup(backupname)
+		objects.DeleteBackup(backupfilepath)
 		fmt.Println("delete called")
 	},
 }
@@ -31,14 +26,6 @@ to quickly create a Cobra application.`,
 func init() {
 	rootCmd.AddCommand(deleteCmd)
 
-	deleteCmd.Flags().StringVarP(&backupname, "name","", "", "Name of the resource")
-	// Here you will define your flags and configuration settings.
+	deleteCmd.Flags().StringVarP(&backupfilepath, "file","", "", "Name of the resource")
 
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// deleteCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// deleteCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

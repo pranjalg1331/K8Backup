@@ -14,7 +14,7 @@ import (
 	// clientcmd "k8s.io/client-go/tools/clientcmd"
 )
 
-func SaveDeployment(clientset *kubernetes.Clientset,depName string,namespace string)(*objects.Backup) {
+func SaveDeployment(clientset *kubernetes.Clientset,depName string,namespace string){
 
 	deploymentsClient := clientset.AppsV1().Deployments(apiv1.NamespaceDefault)
 	dep,err:=deploymentsClient.Get(context.TODO(),depName,metav1.GetOptions{})
@@ -38,12 +38,13 @@ func SaveDeployment(clientset *kubernetes.Clientset,depName string,namespace str
     }
 	
 	backup,_:=objects.CreateBackup(depName,namespace,"deployment",filePath)
+    if(backup!=nil){
+        fmt.Println("deployment saved")
+    }
     // objects.AddBackup(*backup)
-    fmt.Println("deployment saved")
+   
 
 
-
-    return backup
 
     
     

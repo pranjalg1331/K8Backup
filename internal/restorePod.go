@@ -14,7 +14,7 @@ import (
 )
 
 func RestorePod(clientset *kubernetes.Clientset,fileName string) {
-	filePath := filepath.Join("backups", fileName)
+	filePath := filepath.Join(fileName)
     yamlData, err := os.ReadFile(filePath)
 		if err != nil {
 			panic(err.Error())
@@ -46,7 +46,7 @@ func RestorePod(clientset *kubernetes.Clientset,fileName string) {
     if err != nil {
         panic(err.Error())
     }
-    log.Println("Done")
+    log.Println("Creating Pod...")
 
     
     

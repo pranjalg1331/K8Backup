@@ -9,8 +9,7 @@ import (
 // podCmd represents the pod command
 var podCmd = &cobra.Command{
     Use:   "pod",
-    Short: "Manage pod resources",
-    Long:  "Commands for managing pod resources in a Kubernetes cluster.",
+    Short: "Backup and Restore Pod",
 }
 
 func init() {

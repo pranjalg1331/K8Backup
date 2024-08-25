@@ -33,13 +33,7 @@ to quickly create a Cobra application.`,
 // restorepodCmd represents the restorepod command
 var restorepodCmd = &cobra.Command{
 	Use:   "restore",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "restore pod by passing file path of ",
 	Run: func(cmd *cobra.Command, args []string) {
 		clientset:=internal.Connect(path)
 		internal.RestorePod(clientset,backupObjectName)
@@ -50,13 +44,7 @@ to quickly create a Cobra application.`,
 
 var restorePvcCmd = &cobra.Command{
 	Use:   "restore",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "restore pvc from volume snapshot",
 	Run: func(cmd *cobra.Command, args []string) {
 		clientset:=internal.Connect(path)
 		internal.RestorePvc(clientset,backupObjectName)

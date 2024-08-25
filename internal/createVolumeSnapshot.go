@@ -36,19 +36,5 @@ func CreateVolumeSnapshot(pvcname string,namespace string,path string){
 	    log.Fatalln(err.Error())
 	}
 
-	
-	// fileName := fmt.Sprintf("%s-%s-volume-snapshot.yaml", pvcname, namespace)
-    // filePath := filepath.Join("backups", fileName)
 
-
-    // err = os.WriteFile(filePath, depYAML, 0644)
-    // if err != nil {
-    //     panic(err.Error())
-    // }
-	
-	// backup,_:=objects.CreateBackup(,namespace,"colume-snapshot","")
-    // objects.AddBackup(*backup)
-    // fmt.Println("deployment saved")
-
-	
 }

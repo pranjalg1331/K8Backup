@@ -16,7 +16,7 @@ import (
 
 func RestoreDeployment(clientset *kubernetes.Clientset,fileName string) {
 	deploymentsClient := clientset.AppsV1().Deployments(apiv1.NamespaceDefault)
-	filePath := filepath.Join("backups", fileName)
+	filePath := filepath.Join(fileName)
     yamlData, err := os.ReadFile(filePath)
 		if err != nil {
 			panic(err.Error())

@@ -16,7 +16,7 @@ var backupPodCmd = &cobra.Command{
     Long:  "Creates a backup of a specified pod resource in a Kubernetes cluster.",
     Run: func(cmd *cobra.Command, args []string) {
         clientset:=internal.Connect(path)
-		_=internal.SavePod(clientset,name,namespace)
+		internal.SavePod(clientset,name,namespace)
         fmt.Println("Backup created:")
          
     },
@@ -24,29 +24,18 @@ var backupPodCmd = &cobra.Command{
 
 var backupDeploymentCmd = &cobra.Command{
 	Use:   "backup",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "backup k8s deployment",
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		clientset:=internal.Connect(path)
-        _=internal.SaveDeployment(clientset,name,namespace)
+        internal.SaveDeployment(clientset,name,namespace)
         fmt.Println("Backup created:")
 	},
 }
 
 var snapshotVolumeCmd = &cobra.Command{
 	Use:   "backup",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "backup k8s volume by creating volume snapshots",
 	Run: func(cmd *cobra.Command, args []string) {
         internal.CreateVolumeSnapshot(name,namespace,path);
         fmt.Println("Snapshot created")

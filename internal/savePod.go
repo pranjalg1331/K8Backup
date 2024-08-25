@@ -12,7 +12,7 @@ import (
 	// clientcmd "k8s.io/client-go/tools/clientcmd"
 )
 
-func SavePod(clientset *kubernetes.Clientset,podName string,namespace string)(*objects.Backup) {
+func SavePod(clientset *kubernetes.Clientset,podName string,namespace string){
 
     podsClient := clientset.CoreV1().Pods(namespace)
     originalPod, Err := podsClient.Get(context.TODO(), podName, metav1.GetOptions{})
@@ -42,10 +42,13 @@ func SavePod(clientset *kubernetes.Clientset,podName string,namespace string)(*o
     ////create backup obect
 
     backup,_:=objects.CreateBackup(podName,namespace,"pod",filePath)
+    if(backup!=nil){
+        fmt.Println("pod saved")
+    }
     // objects.AddBackup(*backup)
-    fmt.Println("pod saved")
+    
 
-    return backup
+    
 
     
     
