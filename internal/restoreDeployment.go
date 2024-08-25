@@ -14,7 +14,7 @@ import (
 	// clientcmd "k8s.io/client-go/tools/clientcmd"
 )
 
-func RestoreDeployment(clientset *kubernetes.Clientset,fileName string) {
+func RestoreDeployment(clientset *kubernetes.Clientset,fileName,restorename string) {
 	deploymentsClient := clientset.AppsV1().Deployments(apiv1.NamespaceDefault)
 	filePath := filepath.Join(fileName)
     yamlData, err := os.ReadFile(filePath)
@@ -35,7 +35,7 @@ func RestoreDeployment(clientset *kubernetes.Clientset,fileName string) {
 
         deployment := &appsv1.Deployment{
             ObjectMeta: metav1.ObjectMeta{
-                Name: "backedup-deployment-2",
+                Name: restorename,
             },
             Spec: appsv1.DeploymentSpec{
                 Replicas: newDep.Spec.Replicas,

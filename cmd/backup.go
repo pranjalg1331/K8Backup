@@ -7,7 +7,7 @@ import (
     "github.com/spf13/cobra"
 )
 
-var name, namespace, path string
+var name, namespace, path,backupname string
 
 // backupPodCmd represents the backup command
 var backupPodCmd = &cobra.Command{
@@ -37,7 +37,7 @@ var snapshotVolumeCmd = &cobra.Command{
 	Use:   "backup",
 	Short: "backup k8s volume by creating volume snapshots",
 	Run: func(cmd *cobra.Command, args []string) {
-        internal.CreateVolumeSnapshot(name,namespace,path);
+        internal.CreateVolumeSnapshot(name,namespace,path,backupname);
         fmt.Println("Snapshot created")
 	},
 }
@@ -51,17 +51,20 @@ func init() {
     backupPodCmd.Flags().StringVarP(&namespace, "namespace", "s", "default", "Namespace of the resource")
     backupPodCmd.Flags().StringVarP(&path, "path", "p", "", "Name of the resource")  
 
+
     deploymentCmd.AddCommand(backupDeploymentCmd)
 
 	backupDeploymentCmd.Flags().StringVarP(&name, "name", "n", "", "Name of the resource")
     backupDeploymentCmd.Flags().StringVarP(&namespace, "namespace", "s", "default", "Namespace of the resource")
     backupDeploymentCmd.Flags().StringVarP(&path, "path", "p", "", "Name of the resource")  
+  
 
     volumeCmd.AddCommand(snapshotVolumeCmd)
 
     snapshotVolumeCmd.Flags().StringVarP(&name, "name", "n", "", "Name of the resource")
     snapshotVolumeCmd.Flags().StringVarP(&namespace, "namespace", "s", "default", "Namespace of the resource")
     snapshotVolumeCmd.Flags().StringVarP(&path, "path", "p", "", "Name of the resource")  
+    snapshotVolumeCmd.Flags().StringVarP(&backupname, "backup", "b", "", "Name of the resource")  
 
 
 

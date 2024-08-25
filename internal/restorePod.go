@@ -13,7 +13,7 @@ import (
 	// clientcmd "k8s.io/client-go/tools/clientcmd"
 )
 
-func RestorePod(clientset *kubernetes.Clientset,fileName string) {
+func RestorePod(clientset *kubernetes.Clientset,fileName,restorename string) {
 	filePath := filepath.Join(fileName)
     yamlData, err := os.ReadFile(filePath)
 		if err != nil {
@@ -33,7 +33,7 @@ func RestorePod(clientset *kubernetes.Clientset,fileName string) {
     ///////config new pod
           new := &v1.Pod{
             ObjectMeta: metav1.ObjectMeta{
-                Name:      "backup-pod-2", // New name for the duplicate pod
+                Name:      restorename, // New name for the duplicate pod
                 Namespace: newpod.Namespace,
                 Labels:    newpod.Labels,
             },

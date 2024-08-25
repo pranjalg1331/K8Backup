@@ -13,14 +13,14 @@ import (
 	
 )
 
-func RestorePvc(clientset *kubernetes.Clientset,objectName string){
+func RestorePvc(clientset *kubernetes.Clientset,objectName string,restorename string){
 
 	// clientset:=Connect(path)
 
 
 	pvc:=&k8api.PersistentVolumeClaim{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      "pvc-from-backup-2",
+			Name:      restorename,
 			Namespace: "default",
 		},
 		Spec: k8api.PersistentVolumeClaimSpec{

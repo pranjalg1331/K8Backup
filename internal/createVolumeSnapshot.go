@@ -9,14 +9,14 @@ import (
 
 )
 
-func CreateVolumeSnapshot(pvcname string,namespace string,path string){
+func CreateVolumeSnapshot(pvcname string,namespace string,path string,backupname string){
 
 	config:= GetConfig(path)
 	snapshotclassname:="csi-hostpath-snapclass"
 
 	volumeSnapshot := &apiv1.VolumeSnapshot{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:      "golang-snapshot-2",
+			Name:      backupname,
 			Namespace: namespace,
 		},
 		Spec: apiv1.VolumeSnapshotSpec{
