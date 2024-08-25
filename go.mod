@@ -6,10 +6,12 @@ require (
 	github.com/spf13/cobra v1.8.1
 	go.mongodb.org/mongo-driver v1.16.1
 	gopkg.in/yaml.v3 v3.0.1
-	k8s.io/api v0.28.0
-	k8s.io/apimachinery v0.28.0
-	k8s.io/client-go v0.28.0
+	k8s.io/api v0.30.0
+	k8s.io/apimachinery v0.30.0
+	k8s.io/client-go v0.30.0
 )
+
+require github.com/kubernetes-csi/external-snapshotter/client/v4 v4.2.0
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

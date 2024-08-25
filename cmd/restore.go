@@ -47,9 +47,30 @@ to quickly create a Cobra application.`,
 	},
 }
 
+
+var restorePvcCmd = &cobra.Command{
+	Use:   "restore",
+	Short: "A brief description of your command",
+	Long: `A longer description that spans multiple lines and likely contains examples
+and usage of using your command. For example:
+
+Cobra is a CLI library for Go that empowers applications.
+This application is a tool to generate the needed files
+to quickly create a Cobra application.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		clientset:=internal.Connect(path)
+		internal.RestorePvc(clientset,backupObjectName)
+		fmt.Println("restorepvc called")
+	},
+}
+
+
+
+
 func init() {
 	podCmd.AddCommand(restorepodCmd)
 	deploymentCmd.AddCommand(restoredeploymentCmd)
+	volumeCmd.AddCommand(restorePvcCmd)
 
 	restorepodCmd.Flags().StringVarP(&backupObjectName, "object", "o", "", "Name of the resource")
 	restorepodCmd.Flags().StringVarP(&path, "path", "p", "", "Name of the resource")  
@@ -57,13 +78,6 @@ func init() {
 	restoredeploymentCmd.Flags().StringVarP(&backupObjectName, "object", "o", "", "Name of the resource")
 	restoredeploymentCmd.Flags().StringVarP(&path, "path", "p", "", "Name of the resource")  
 
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// restorepodCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// restorepodCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	restorePvcCmd.Flags().StringVarP(&backupObjectName, "object", "o", "", "Name of the resource")
+	restorePvcCmd.Flags().StringVarP(&path, "path", "p", "", "Name of the resource")  
 }
