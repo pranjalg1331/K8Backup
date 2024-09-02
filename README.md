@@ -1,4 +1,4 @@
-<h2>Pre-requisites of using this project<h2>
+<h2>Pre-requisites of using this project</h2>
 <p>Kube config file-The .kube/config file is essential for connecting your local machine to a Kubernetes cluster. This file contains the necessary configuration details like cluster information, credentials, and context. Below are the steps to obtain and set up the .kube/config file<p>
 
 <h2>Commands Used</h2>
