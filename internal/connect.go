@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"fmt"
+
 	"log"
 	// "os"
 	// "path/filepath"
@@ -24,7 +24,7 @@ func Connect(path string) *kubernetes.Clientset {
 }
 
 func GetConfig(path string) *rest.Config{
-    fmt.Println(path)
+    // fmt.Println(path)
 
     // home,exists := os.LookupEnv("$HOME")
     // if !exists {

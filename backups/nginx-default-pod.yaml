@@ -7,7 +7,7 @@ objectmeta:
     namespace: default
     selflink: ""
     uid: 678a49a2-8904-4138-bba3-22b602b83993
-    resourceversion: "36370"
+    resourceversion: "96711"
     generation: 0
     creationtimestamp: "2024-08-25T11:10:01+05:30"
     deletiontimestamp: null
@@ -493,7 +493,7 @@ objectmeta:
         - manager: kubelet
           operation: Update
           apiversion: v1
-          time: "2024-08-25T11:10:41+05:30"
+          time: "2024-09-02T17:04:59+05:30"
           fieldstype: FieldsV1
           fieldsv1:
             raw:
@@ -970,8 +970,8 @@ objectmeta:
                 - 46
                 - 48
                 - 46
-                - 49
-                - 52
+                - 50
+                - 48
                 - 92
                 - 34
                 - 125
@@ -1188,13 +1188,13 @@ status:
         - type: Ready
           status: "True"
           lastprobetime: "0001-01-01T00:00:00Z"
-          lasttransitiontime: "2024-08-25T11:10:41+05:30"
+          lasttransitiontime: "2024-09-02T17:04:59+05:30"
           reason: ""
           message: ""
         - type: ContainersReady
           status: "True"
           lastprobetime: "0001-01-01T00:00:00Z"
-          lasttransitiontime: "2024-08-25T11:10:41+05:30"
+          lasttransitiontime: "2024-09-02T17:04:59+05:30"
           reason: ""
           message: ""
         - type: PodScheduled
@@ -1208,9 +1208,9 @@ status:
     nominatednodename: ""
     hostip: 192.168.49.2
     hostips: []
-    podip: 10.244.0.14
+    podip: 10.244.0.20
     podips:
-        - ip: 10.244.0.14
+        - ip: 10.244.0.20
     starttime: "2024-08-25T11:10:01+05:30"
     initcontainerstatuses: []
     containerstatuses:
@@ -1218,17 +1218,24 @@ status:
           state:
             waiting: null
             running:
-                startedat: "2024-08-25T11:10:40+05:30"
+                startedat: "2024-09-02T17:04:57+05:30"
             terminated: null
           lastterminationstate:
             waiting: null
             running: null
-            terminated: null
+            terminated:
+                exitcode: 255
+                signal: 0
+                reason: Error
+                message: ""
+                startedat: "2024-08-25T11:10:40+05:30"
+                finishedat: "2024-09-02T17:04:08+05:30"
+                containerid: docker://133fa4f42c8c0e4b36f476842abd9e9791dd45ce6c730c83e42cf9ddabe308af
           ready: true
-          restartcount: 0
+          restartcount: 1
           image: nginx:latest
           imageid: docker-pullable://nginx@sha256:447a8665cc1dab95b1ca778e162215839ccbb9189104c79d7ec3a81e14577add
-          containerid: docker://133fa4f42c8c0e4b36f476842abd9e9791dd45ce6c730c83e42cf9ddabe308af
+          containerid: docker://17cb78e0373b56994ab2987ad5b8488d1418d887c37b6f37e7ba1f8486b4ecee
           started: true
           allocatedresources: {}
           resources: null

@@ -21,7 +21,7 @@ func SaveDeployment(clientset *kubernetes.Clientset,depName string,namespace str
     if err!=nil{
         panic(err.Error())
     }
-    fmt.Print(dep.Labels)
+
 	
 	depYAML, err := yaml.Marshal(dep)
     if err != nil {

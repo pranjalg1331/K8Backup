@@ -54,7 +54,6 @@ func RestorePvc(clientset *kubernetes.Clientset,objectName string,restorename st
 		log.Fatalf("Failed to create PVC: %v", err)
 	}
 
-	log.Printf("created pvc")
 
 	
 

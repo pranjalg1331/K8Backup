@@ -1,8 +1,7 @@
 package internal
 
 import (
-    "log"
-    "fmt"
+
 	"os"
 	"context"
     "path/filepath"
@@ -30,8 +29,7 @@ func RestoreDeployment(clientset *kubernetes.Clientset,fileName,restorename stri
     if err != nil {
         panic(err.Error())
     }
-    log.Println("Done")
-    
+
 
         deployment := &appsv1.Deployment{
             ObjectMeta: metav1.ObjectMeta{
@@ -53,7 +51,7 @@ func RestoreDeployment(clientset *kubernetes.Clientset,fileName,restorename stri
             },
         }
 
-        fmt.Println("Creating deployment...")
+
         _, err = deploymentsClient.Create(context.TODO(), deployment, metav1.CreateOptions{})
         if err != nil {
             panic(err)

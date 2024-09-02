@@ -28,7 +28,7 @@ func RestorePod(clientset *kubernetes.Clientset,fileName,restorename string) {
     if err != nil {
         panic(err.Error())
     }
-    log.Println("Done")
+
     
     ///////config new pod
           new := &v1.Pod{

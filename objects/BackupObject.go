@@ -5,7 +5,7 @@ import (
 	"context"
 	// "encoding/json"
 	"fmt"
-	// "os"
+	"os"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -29,14 +29,20 @@ var collection *mongo.Collection
 var ctx = context.TODO() 
 
 func connectMongo()(){
-    clientOptions := options.Client().ApplyURI("mongodb://localhost:27017/")
+    mongoURL := os.Getenv("MONGO_URL")
+    if mongoURL == "" {
+
+        fmt.Println("MONGO_URL environment variable is not set.")
+        return
+    }
+    clientOptions := options.Client().ApplyURI(mongoURL)
 	client, err := mongo.Connect(ctx, clientOptions)
 	if err != nil {
-		// log.Fatal(err)
-        panic("mongo connection failed")
+        fmt.Println("mongo connection failed")
+        return
 	}
     collection = client.Database("K8Backups").Collection("backups")
-    // return collection
+
 }
 
 
@@ -102,7 +108,7 @@ func CreateBackup(name, namespace, resource,filePath string) (*Backup,error) {
     backup,_:=GetBackup(filePath)
     // fmt.Println(backup)
     if(backup!=nil){
-        fmt.Println("backup with this name already exists")
+        fmt.Println("backup with this name already exists. Please type yes if you still want to create backup")
         flag=AskForConfirmation()
     }
 
