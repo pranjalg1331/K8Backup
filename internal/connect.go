@@ -3,8 +3,8 @@ package internal
 import (
 	"fmt"
 	"log"
-	"os"
-	"path/filepath"
+	// "os"
+	// "path/filepath"
 
 	kubernetes "k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
@@ -26,14 +26,14 @@ func Connect(path string) *kubernetes.Clientset {
 func GetConfig(path string) *rest.Config{
     fmt.Println(path)
 
-    home,exists := os.LookupEnv("$HOME")
-    if !exists {
-        home = "C:\\Users\\Asush"
-        // panic("dir not found")
-    }
-	log.Println(home)
-    configPath := filepath.Join(home, ".kube", "config")
-	log.Print(configPath)
+    // home,exists := os.LookupEnv("$HOME")
+    // if !exists {
+    //     home = "C:\\Users\\Asush"
+    //     // panic("dir not found")
+    // }
+	// log.Println(home)
+    // configPath := filepath.Join(home, ".kube", "config")
+	// log.Print(configPath)
     config, err := clientcmd.BuildConfigFromFlags("", path)
     if err != nil {
         log.Panic("failed to create K8s config")
