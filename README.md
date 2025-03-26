@@ -79,6 +79,3 @@ K8Backup delete --file "backup_filename"
 ## Contributing
 Contributions are welcome! Feel free to submit issues or open pull requests.
 
-## License
-[Specify License Here]
-
