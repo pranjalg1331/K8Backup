@@ -6,27 +6,31 @@ package cmd
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/spf13/cobra"
 )
 
-// volumeCmd represents the volume command
+// volumeCmd represents the "volume" command in the CLI.
+// This command will be the parent for volume-related subcommands like snapshots.
 var volumeCmd = &cobra.Command{
 	Use:   "volume",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "Manage Kubernetes volumes and snapshots",
+	Long: `The "volume" command allows you to perform operations on Kubernetes volumes.
+You can create, snapshot, restore, or list volumes using its subcommands.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+Example usage:
+  k8backup volume snapshot
+  k8backup volume restore
+`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("volume called")
+		// This will be executed if "volume" is called without subcommands
+		log.Println("[INFO] Volume command called. Use a subcommand like 'snapshot' or 'restore'.")
+		fmt.Println("volume command invoked")
 	},
 }
 
 func init() {
+	// Add the volume command as a child of the root command
 	rootCmd.AddCommand(volumeCmd)
-	volumeCmd.AddCommand(snapshotVolumeCmd)
-
 }

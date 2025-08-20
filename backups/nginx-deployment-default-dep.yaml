@@ -6,10 +6,10 @@ objectmeta:
     generatename: ""
     namespace: default
     selflink: ""
-    uid: c4bb23a2-60f4-443c-b058-4b06d1afdd72
-    resourceversion: "640140"
+    uid: 255ff1b7-3f51-4fe9-8085-86674032fe85
+    resourceversion: "1609"
     generation: 1
-    creationtimestamp: "2024-08-16T12:55:52+05:30"
+    creationtimestamp: "2025-08-19T19:48:47+05:30"
     deletiontimestamp: null
     deletiongraceperiodseconds: null
     labels:
@@ -24,7 +24,7 @@ objectmeta:
         - manager: kubectl-client-side-apply
           operation: Update
           apiversion: apps/v1
-          time: "2024-08-16T12:55:52+05:30"
+          time: "2025-08-19T19:48:47+05:30"
           fieldstype: FieldsV1
           fieldsv1:
             raw:
@@ -836,7 +836,7 @@ objectmeta:
         - manager: kube-controller-manager
           operation: Update
           apiversion: apps/v1
-          time: "2024-08-16T12:56:11+05:30"
+          time: "2025-08-19T19:53:35+05:30"
           fieldstype: FieldsV1
           fieldsv1:
             raw:
@@ -1433,6 +1433,7 @@ spec:
                 sysctls: []
                 fsgroupchangepolicy: null
                 seccompprofile: null
+                apparmorprofile: null
             imagepullsecrets: []
             hostname: ""
             subdomain: ""
@@ -1479,14 +1480,14 @@ status:
     conditions:
         - type: Available
           status: "True"
-          lastupdatetime: "2024-08-16T12:56:11+05:30"
-          lasttransitiontime: "2024-08-16T12:56:11+05:30"
+          lastupdatetime: "2025-08-19T19:53:35+05:30"
+          lasttransitiontime: "2025-08-19T19:53:35+05:30"
           reason: MinimumReplicasAvailable
           message: Deployment has minimum availability.
         - type: Progressing
           status: "True"
-          lastupdatetime: "2024-08-16T12:56:11+05:30"
-          lasttransitiontime: "2024-08-16T12:55:52+05:30"
+          lastupdatetime: "2025-08-19T19:53:35+05:30"
+          lasttransitiontime: "2025-08-19T19:48:47+05:30"
           reason: NewReplicaSetAvailable
-          message: ReplicaSet "nginx-deployment-86dcfdf4c6" has successfully progressed.
+          message: ReplicaSet "nginx-deployment-d556bf558" has successfully progressed.
     collisioncount: null

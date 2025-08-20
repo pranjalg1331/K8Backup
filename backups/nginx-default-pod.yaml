@@ -6,24 +6,22 @@ objectmeta:
     generatename: ""
     namespace: default
     selflink: ""
-    uid: 678a49a2-8904-4138-bba3-22b602b83993
-    resourceversion: "96711"
+    uid: 8f538cc9-237b-43ac-8a90-116f83825a87
+    resourceversion: "1230"
     generation: 0
-    creationtimestamp: "2024-08-25T11:10:01+05:30"
+    creationtimestamp: "2025-08-19T19:44:02+05:30"
     deletiontimestamp: null
     deletiongraceperiodseconds: null
     labels:
-        env: test
-    annotations:
-        kubectl.kubernetes.io/last-applied-configuration: |
-            {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"env":"test"},"name":"nginx","namespace":"default"},"spec":{"containers":[{"image":"nginx","imagePullPolicy":"IfNotPresent","name":"nginx"}]}}
+        run: nginx
+    annotations: {}
     ownerreferences: []
     finalizers: []
     managedfields:
-        - manager: kubectl-client-side-apply
+        - manager: kubectl-run
           operation: Update
           apiversion: v1
-          time: "2024-08-25T11:10:01+05:30"
+          time: "2025-08-19T19:44:02+05:30"
           fieldstype: FieldsV1
           fieldsv1:
             raw:
@@ -45,16 +43,11 @@ objectmeta:
                 - 34
                 - 102
                 - 58
+                - 108
                 - 97
-                - 110
-                - 110
-                - 111
-                - 116
-                - 97
-                - 116
-                - 105
-                - 111
-                - 110
+                - 98
+                - 101
+                - 108
                 - 115
                 - 34
                 - 58
@@ -69,85 +62,9 @@ objectmeta:
                 - 34
                 - 102
                 - 58
-                - 107
-                - 117
-                - 98
-                - 101
-                - 99
-                - 116
-                - 108
-                - 46
-                - 107
-                - 117
-                - 98
-                - 101
                 - 114
-                - 110
-                - 101
-                - 116
-                - 101
-                - 115
-                - 46
-                - 105
-                - 111
-                - 47
-                - 108
-                - 97
-                - 115
-                - 116
-                - 45
-                - 97
-                - 112
-                - 112
-                - 108
-                - 105
-                - 101
-                - 100
-                - 45
-                - 99
-                - 111
-                - 110
-                - 102
-                - 105
-                - 103
                 - 117
-                - 114
-                - 97
-                - 116
-                - 105
-                - 111
                 - 110
-                - 34
-                - 58
-                - 123
-                - 125
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
-                - 108
-                - 97
-                - 98
-                - 101
-                - 108
-                - 115
-                - 34
-                - 58
-                - 123
-                - 34
-                - 46
-                - 34
-                - 58
-                - 123
-                - 125
-                - 44
-                - 34
-                - 102
-                - 58
-                - 101
-                - 110
-                - 118
                 - 34
                 - 58
                 - 123
@@ -260,6 +177,119 @@ objectmeta:
                 - 34
                 - 58
                 - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 112
+                - 111
+                - 114
+                - 116
+                - 115
+                - 34
+                - 58
+                - 123
+                - 34
+                - 46
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 107
+                - 58
+                - 123
+                - 92
+                - 34
+                - 99
+                - 111
+                - 110
+                - 116
+                - 97
+                - 105
+                - 110
+                - 101
+                - 114
+                - 80
+                - 111
+                - 114
+                - 116
+                - 92
+                - 34
+                - 58
+                - 56
+                - 48
+                - 44
+                - 92
+                - 34
+                - 112
+                - 114
+                - 111
+                - 116
+                - 111
+                - 99
+                - 111
+                - 108
+                - 92
+                - 34
+                - 58
+                - 92
+                - 34
+                - 84
+                - 67
+                - 80
+                - 92
+                - 34
+                - 125
+                - 34
+                - 58
+                - 123
+                - 34
+                - 46
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 99
+                - 111
+                - 110
+                - 116
+                - 97
+                - 105
+                - 110
+                - 101
+                - 114
+                - 80
+                - 111
+                - 114
+                - 116
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 112
+                - 114
+                - 111
+                - 116
+                - 111
+                - 99
+                - 111
+                - 108
+                - 34
+                - 58
+                - 123
+                - 125
+                - 125
                 - 125
                 - 44
                 - 34
@@ -493,7 +523,7 @@ objectmeta:
         - manager: kubelet
           operation: Update
           apiversion: v1
-          time: "2024-09-02T17:04:59+05:30"
+          time: "2025-08-19T19:47:39+05:30"
           fieldstype: FieldsV1
           fieldsv1:
             raw:
@@ -771,6 +801,133 @@ objectmeta:
                 - 58
                 - 92
                 - 34
+                - 80
+                - 111
+                - 100
+                - 82
+                - 101
+                - 97
+                - 100
+                - 121
+                - 84
+                - 111
+                - 83
+                - 116
+                - 97
+                - 114
+                - 116
+                - 67
+                - 111
+                - 110
+                - 116
+                - 97
+                - 105
+                - 110
+                - 101
+                - 114
+                - 115
+                - 92
+                - 34
+                - 125
+                - 34
+                - 58
+                - 123
+                - 34
+                - 46
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 108
+                - 97
+                - 115
+                - 116
+                - 80
+                - 114
+                - 111
+                - 98
+                - 101
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 108
+                - 97
+                - 115
+                - 116
+                - 84
+                - 114
+                - 97
+                - 110
+                - 115
+                - 105
+                - 116
+                - 105
+                - 111
+                - 110
+                - 84
+                - 105
+                - 109
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 115
+                - 116
+                - 97
+                - 116
+                - 117
+                - 115
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
+                - 116
+                - 121
+                - 112
+                - 101
+                - 34
+                - 58
+                - 123
+                - 125
+                - 125
+                - 44
+                - 34
+                - 107
+                - 58
+                - 123
+                - 92
+                - 34
+                - 116
+                - 121
+                - 112
+                - 101
+                - 92
+                - 34
+                - 58
+                - 92
+                - 34
                 - 82
                 - 101
                 - 97
@@ -906,6 +1063,21 @@ objectmeta:
                 - 34
                 - 102
                 - 58
+                - 104
+                - 111
+                - 115
+                - 116
+                - 73
+                - 80
+                - 115
+                - 34
+                - 58
+                - 123
+                - 125
+                - 44
+                - 34
+                - 102
+                - 58
                 - 112
                 - 104
                 - 97
@@ -970,8 +1142,7 @@ objectmeta:
                 - 46
                 - 48
                 - 46
-                - 50
-                - 48
+                - 55
                 - 92
                 - 34
                 - 125
@@ -1018,7 +1189,7 @@ objectmeta:
           subresource: status
 spec:
     volumes:
-        - name: kube-api-access-mngqz
+        - name: kube-api-access-zg4lf
           volumesource:
             hostpath: null
             emptydir: null
@@ -1090,7 +1261,12 @@ spec:
           command: []
           args: []
           workingdir: ""
-          ports: []
+          ports:
+            - name: ""
+              hostport: 0
+              containerport: 80
+              protocol: TCP
+              hostip: ""
           envfrom: []
           env: []
           resources:
@@ -1100,7 +1276,7 @@ spec:
           resizepolicy: []
           restartpolicy: null
           volumemounts:
-            - name: kube-api-access-mngqz
+            - name: kube-api-access-zg4lf
               readonly: true
               recursivereadonly: null
               mountpath: /var/run/secrets/kubernetes.io/serviceaccount
@@ -1114,7 +1290,7 @@ spec:
           lifecycle: null
           terminationmessagepath: /dev/termination-log
           terminationmessagepolicy: File
-          imagepullpolicy: IfNotPresent
+          imagepullpolicy: Always
           securitycontext: null
           stdin: false
           stdinonce: false
@@ -1179,67 +1355,71 @@ spec:
 status:
     phase: Running
     conditions:
+        - type: PodReadyToStartContainers
+          status: "True"
+          lastprobetime: "0001-01-01T00:00:00Z"
+          lasttransitiontime: "2025-08-19T19:47:39+05:30"
+          reason: ""
+          message: ""
         - type: Initialized
           status: "True"
           lastprobetime: "0001-01-01T00:00:00Z"
-          lasttransitiontime: "2024-08-25T11:10:01+05:30"
+          lasttransitiontime: "2025-08-19T19:44:02+05:30"
           reason: ""
           message: ""
         - type: Ready
           status: "True"
           lastprobetime: "0001-01-01T00:00:00Z"
-          lasttransitiontime: "2024-09-02T17:04:59+05:30"
+          lasttransitiontime: "2025-08-19T19:47:39+05:30"
           reason: ""
           message: ""
         - type: ContainersReady
           status: "True"
           lastprobetime: "0001-01-01T00:00:00Z"
-          lasttransitiontime: "2024-09-02T17:04:59+05:30"
+          lasttransitiontime: "2025-08-19T19:47:39+05:30"
           reason: ""
           message: ""
         - type: PodScheduled
           status: "True"
           lastprobetime: "0001-01-01T00:00:00Z"
-          lasttransitiontime: "2024-08-25T11:10:01+05:30"
+          lasttransitiontime: "2025-08-19T19:44:02+05:30"
           reason: ""
           message: ""
     message: ""
     reason: ""
     nominatednodename: ""
     hostip: 192.168.49.2
-    hostips: []
-    podip: 10.244.0.20
+    hostips:
+        - ip: 192.168.49.2
+    podip: 10.244.0.7
     podips:
-        - ip: 10.244.0.20
-    starttime: "2024-08-25T11:10:01+05:30"
+        - ip: 10.244.0.7
+    starttime: "2025-08-19T19:44:02+05:30"
     initcontainerstatuses: []
     containerstatuses:
         - name: nginx
           state:
             waiting: null
             running:
-                startedat: "2024-09-02T17:04:57+05:30"
+                startedat: "2025-08-19T19:47:39+05:30"
             terminated: null
           lastterminationstate:
             waiting: null
             running: null
-            terminated:
-                exitcode: 255
-                signal: 0
-                reason: Error
-                message: ""
-                startedat: "2024-08-25T11:10:40+05:30"
-                finishedat: "2024-09-02T17:04:08+05:30"
-                containerid: docker://133fa4f42c8c0e4b36f476842abd9e9791dd45ce6c730c83e42cf9ddabe308af
+            terminated: null
           ready: true
-          restartcount: 1
+          restartcount: 0
           image: nginx:latest
-          imageid: docker-pullable://nginx@sha256:447a8665cc1dab95b1ca778e162215839ccbb9189104c79d7ec3a81e14577add
-          containerid: docker://17cb78e0373b56994ab2987ad5b8488d1418d887c37b6f37e7ba1f8486b4ecee
+          imageid: docker-pullable://nginx@sha256:33e0bbc7ca9ecf108140af6288c7c9d1ecc77548cbfd3952fd8466a75edefe57
+          containerid: docker://648db347e2e3abc2b5163ab097dcf04d7b327da74bce38ba9b2e975ee9b0fdd1
           started: true
           allocatedresources: {}
           resources: null
-          volumemounts: []
+          volumemounts:
+            - name: kube-api-access-zg4lf
+              mountpath: /var/run/secrets/kubernetes.io/serviceaccount
+              readonly: true
+              recursivereadonly: Disabled
     qosclass: BestEffort
     ephemeralcontainerstatuses: []
     resize: ""
